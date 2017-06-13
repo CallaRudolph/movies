@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Movies</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="movies">
+        <h1>Wanna go to the movies?</h1><br>
+        <label for="heading">Movie you wanna drool at</label>
+        <select class="form-control" id="movie">
+          <option value="Spice World">Spice World</option>
+          <option value="Braveheart">Braveheart</option>
+          <option value="Frozen">Frozen</option>
+        </select><br>
+        <label for="heading">Time you wanna g0</label>
+        <select class="form-control" id="time">
+          <option value="morning">10AM</option>
+          <option value="noon">Noon</option>
+          <option value="evening">4PM</option>
+        </select><br>
+        <label for="heading">What is your age?</label>
+        <select class="form-control" id="age">
+          <option value="teenager">I am a young student</option>
+          <option value="adult">I am a basic adult</option>
+          <option value="senior">I am older than dirt</option>
+        </select><br>
+
+        <button type="submit" class="btn-danger">Let us go!</button>
+
+      </form>
+
+      <div id="ticket">
+        <h2>Here is what you owe</h2>
+        <p>You are about to enjoy <span class="movieType"></span> at <span class="movieTime"></span> . It will cost <span class="moviePrice"></span>.</p>
+      </div>
+    </div>
+  </body>
+</html>
