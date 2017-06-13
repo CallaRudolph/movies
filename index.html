@@ -19,24 +19,27 @@
         </select><br>
         <label for="heading">Time you wanna g0</label>
         <select class="form-control" id="time">
-          <option value="10AM">10AM</option>
-          <option value="noon">Noon</option>
-          <option value="4PM">4PM</option>
+          <option id="10AM" value="5">10AM</option>
+          <option id="Noon" value="7">Noon</option>
+          <option id="4PM"value="10">4PM</option>
         </select><br>
         <label for="heading">What is your age?</label>
         <select class="form-control" id="age">
-          <option value="teenager">I am a young student</option>
-          <option value="adult">I am a basic adult</option>
-          <option value="senior">I am older than dirt</option>
+          <option value="1">I am a young student</option>
+          <option value="3">I am a basic adult</option>
+          <option value="2">I am older than dirt</option>
         </select><br>
 
-        <button type="submit" class="btn-danger">Let us go!</button>
+        <button type="submit" class="btn-danger">Let us go!</button><br>
 
       </form>
 
-      <div id="ticket">
+      <div class="receipt">
         <h2>Here is what's going on</h2>
-        <p>You are about to enjoy <span class="movieType"></span> at <span class="movieTime"></span>. It will cost <span class="moviePrice"></span>.</p>
+
+        <p>You are about to enjoy <span class="movieType"></span>.</p>
+        <ul id="ticket">
+        </ul>
       </div>
     </div>
   </body>
