@@ -1,22 +1,19 @@
-function Ticket(movie, time, age) {
+function Ticket(movie, time, age, amount) {
   this.movie = movie;
   this.time = time;
   this.age = age;
-  // this.price;
+  this.amount = amount;
 }
 
-// var Ticket = {};
-// Ticket.price = function () {
-//   return this.movie + this.time + this.age;
-// }
 Ticket.prototype.movieTicket = function () {
-  return this.time + this.age;
+  return (this.time + this.age) * this.amount;
 }
 
 function resetFields() {
   $("#movie").val("Spice World");
-  $("#time").val("5");
-  $("#age").val("1");
+  $("#time").val("10");
+  $("#age").val("5");
+  $("#amount").val("");
 }
 
 
@@ -27,13 +24,13 @@ $(document).ready(function() {
   var inputtedMovie = $("#movie").val();
   var inputtedTime = parseInt($("#time").val());
   var inputtedAge = parseInt($("#age").val());
+  var inputtedAmount = parseInt($("#amount").val());
 
-  var newTicket = new Ticket(inputtedMovie, inputtedTime, inputtedAge);
+  var newTicket = new Ticket(inputtedMovie, inputtedTime, inputtedAge, inputtedAmount);
+
   $(".receipt").show();
-  // $(this).remove();
-  $("#ticket").text(""+"You owe us $" + newTicket.movieTicket());
+  $("#ticket").text("You owe us $" + newTicket.movieTicket() + "! Pay up now.");
   $(".movieType").text(newTicket.movie);
-  console.log(inputtedAge);
 
   resetFields();
   });
