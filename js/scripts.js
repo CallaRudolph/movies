@@ -13,7 +13,7 @@ function resetFields() {
   $("#movie").val("Spice World");
   $("#time").val("10");
   $("#age").val("5");
-  $("#amount").val("");
+  $("#amount").val("1");
 }
 
 
